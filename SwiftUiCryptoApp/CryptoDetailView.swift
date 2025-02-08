@@ -4,6 +4,7 @@
 //
 //  Created by ipeerless on 25/01/2025.
 //
+
 import SwiftUI
 
 struct CryptoDetailView: View {
@@ -228,8 +229,8 @@ struct CryptoDetailView: View {
 //                .frame(width: 90, height: 90)
 //                Spacer()
 //                VStack {
-//                    
-//                    
+//
+//
 //                    Text(crypto.name)
 //                        .font(.largeTitle)
 //                        .font(.headline)

@@ -7,11 +7,14 @@
 
 import SwiftUI
 
+
 @main
 struct SwiftUiCryptoAppApp: App {
+  
     var body: some Scene {
         WindowGroup {
             ContentView()
+              
         }
     }
 }

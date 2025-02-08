@@ -6,17 +6,24 @@
 //
 
 import Foundation
+import Observation
 
 @Observable
 class CryptoService {
+    private let baseURL = Secrets.apiBaseURL
+    
+    
     var cryptos: [Crypto] = []
+    func fetchCryptos() {
+//            guard let url = URL(string: "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false") else {
+//                print("Invalid URL")
+//                return
+//            }
     
-        func fetchCryptos() {
-            guard let url = URL(string: "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false") else {
-                print("Invalid URL")
-                return
-            }
-    
+        guard let url = URL(string: "\(baseURL)/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false") else {
+                   print("Invalid URL: \(baseURL)")
+                   return
+               }
             URLSession.shared.dataTask(with: url) { data, response, error in
                 if let data = data {
                     do {
@@ -31,8 +38,7 @@ class CryptoService {
                 }
             }.resume()
         }
-    
-    
+   
 //  func    with completion
 //    func fetchCryptos(completion: @escaping ([Crypto]?) -> Void) {
 //        guard let url = URL(string: "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false") else {

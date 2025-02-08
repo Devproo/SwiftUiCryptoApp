@@ -47,7 +47,10 @@ struct ContentView: View {
 }
 
 #Preview {
+   
+    
     ContentView()
+       
 }
 
 //workswith completion
