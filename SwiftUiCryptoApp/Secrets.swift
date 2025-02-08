@@ -8,5 +8,6 @@
 import Foundation
 
 struct Secrets {
+//     added to gitignore
     static let apiBaseURL = "https://api.coingecko.com/api/v3"
 }
