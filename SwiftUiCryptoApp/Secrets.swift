@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct Secret {
+struct Secrets {
     static let apiBaseURL = "https://api.coingecko.com/api/v3"
 }
