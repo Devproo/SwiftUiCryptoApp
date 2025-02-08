@@ -10,9 +10,6 @@ import Observation
 
 @Observable
 class CryptoService {
-    class CryptoService {
-        private let baseURL = Secrets.apiBaseURL
-    }
     
   var cryptos: [Crypto] = []
     func fetchCryptos() {
