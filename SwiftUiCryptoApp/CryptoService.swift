@@ -10,10 +10,11 @@ import Observation
 
 @Observable
 class CryptoService {
- 
+    class CryptoService {
+        private let baseURL = Secret.apiBaseURL
+    }
     
-    
-    var cryptos: [Crypto] = []
+  var cryptos: [Crypto] = []
     func fetchCryptos() {
             guard let url = URL(string: "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false") else {
                 print("Invalid URL")
